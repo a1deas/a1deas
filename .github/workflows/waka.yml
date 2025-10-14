@@ -2,8 +2,8 @@ name: WakaTime Stats
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # update every day
-  workflow_dispatch:
+    - cron: "0 0 * * *"   # everyday at 00:00 UTC
+  workflow_dispatch:       # actions run
 
 jobs:
   update-readme:
@@ -12,3 +12,11 @@ jobs:
       - uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          TIME_RANGE: last_7_days
+          SHOW_TITLE: true
+          SHOW_TIME: true
+          SHOW_TOTAL: true
+          LANG_COUNT: 6
+          STOP_AT_OTHER: true
+          SECTION_NAME: waka
+          COMMIT_MESSAGE: "chore: update WakaTime stats"
