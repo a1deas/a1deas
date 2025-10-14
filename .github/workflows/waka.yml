@@ -1,25 +1,61 @@
 name: WakaTime Stats
 
+on:
+  workflow_dispatch:
+    inputs:
+      warm_start:
+        description: "Run once with all_time to seed README"
+        type: boolean
+        default: false
+  schedule:
+    - cron: "10 0 * * *"
+
 permissions:
   contents: write
 
-on:
-  schedule:
-    - cron: "0 0 * * *"   # everyday at 00:00 UTC
-  workflow_dispatch:       # actions run
-
 jobs:
   update-readme:
+    name: WakaReadme DevMetrics
     runs-on: ubuntu-latest
+    concurrency:
+      group: waka-readme
+      cancel-in-progress: false
+
     steps:
-      - uses: athul/waka-readme@master
+      - name: Choose time range
+        id: tr
+        run: |
+          if [ "${{ inputs.warm_start }}" = "true" ]; then
+            echo "range=all_time" >> $GITHUB_OUTPUT
+          else
+            echo "range=last_7_days" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update README with WakaTime
+        uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          TIME_RANGE: all_time
+
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY: a1deas/a1deas
+          API_BASE_URL: https://wakatime.com/api
+
+          # ——— content ———
+          SECTION_NAME: waka
           SHOW_TITLE: true
           SHOW_TIME: true
-          SHOW_TOTAL: true
-          LANG_COUNT: 6
+          SHOW_MASKED_TIME: true
+          SHOW_TOTAL: false
+          LANG_COUNT: 8
           STOP_AT_OTHER: true
-          SECTION_NAME: waka
+          IGNORED_LANGUAGES: Binary JSON YAML TOML XML
+          BLOCKS: ⣀⣄⣤⣦⣶⣷⣿
+          CODE_LANG: txt
+          TIME_RANGE: ${{ steps.tr.outputs.range }}
+
+          # ——— commit meta ———
           COMMIT_MESSAGE: "chore: update WakaTime stats"
+          COMMITTER_NAME: "GitHubActionBot"
+          COMMITTER_EMAIL: "action-bot@users.noreply.github.com"
+          AUTHOR_NAME: "Roland | A1deas"
+          AUTHOR_EMAIL: ${{ secrets.AUTHOR_EMAIL }}
