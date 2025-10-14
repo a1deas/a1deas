@@ -59,6 +59,15 @@ as most projects are private or organization-based.
 
 ---
 
+### Weekly Dev Metrics
+
+> Time spent coding this week: 
+
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
+---
+
 ### Current Focus
 
 Exploring CUDA-based training, multi-agent orchestration,  
