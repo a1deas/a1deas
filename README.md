@@ -19,8 +19,8 @@
 
 **Languages**
 - **Proficient:** Python  
-- **Working:** TypeScript (Next.js), SQL, Bash  
-- **Familiar:** JavaScript, C++, C#
+- **Working:** C++, TypeScript (Next.js), SQL, Bash  
+- **Familiar:** JavaScript, C#
 
 **ML / Data**
 - PyTorch, Transformers (Hugging Face), scikit-learn  
