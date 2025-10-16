@@ -48,7 +48,7 @@ jobs:
           SHOW_TOTAL: false
           LANG_COUNT: 8
           STOP_AT_OTHER: true
-          IGNORED_LANGUAGES: Binary JSON YAML TOML XML Cuda
+          IGNORED_LANGUAGES: Binary JSON YAML TOML XML Cuda Git Config
           BLOCKS: ⣀⣄⣤⣦⣶⣷⣿
           CODE_LANG: txt
           TIME_RANGE: ${{ steps.tr.outputs.range }}
