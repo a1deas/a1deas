@@ -8,7 +8,7 @@ on:
         type: boolean
         default: false
   schedule:
-    - cron: "10 0 * * *"
+    - cron: "10 0 * * *" 
 
 permissions:
   contents: write
@@ -34,26 +34,38 @@ jobs:
       - name: Update README with WakaTime
         uses: athul/waka-readme@master
         with:
+          # ---- auth ----
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPOSITORY: a1deas/a1deas
           API_BASE_URL: https://wakatime.com/api
 
-          # ——— content ———
+          # ---- content ----
           SECTION_NAME: waka
           SHOW_TITLE: true
           SHOW_TIME: true
           SHOW_MASKED_TIME: true
-          SHOW_TOTAL: false
-          LANG_COUNT: 8
+          SHOW_TOTAL: true                  
+          LANG_COUNT: 6
           STOP_AT_OTHER: true
-          IGNORED_LANGUAGES: Binary JSON YAML TOML XML Cuda Git Config
-          BLOCKS: ⣀⣄⣤⣦⣶⣷⣿
           CODE_LANG: txt
           TIME_RANGE: ${{ steps.tr.outputs.range }}
+          BLOCKS: ⣀⣄⣤⣦⣶⣷⣿
 
-          # ——— commit meta ———
+
+          IGNORED_LANGUAGES: |
+            Binary
+            JSON
+            YAML
+            TOML
+            XML
+            INI
+            Git Config
+            Objective-C
+            Cuda
+            # Markdown
+
+          # ---- commit meta ----
           COMMIT_MESSAGE: "chore: update WakaTime stats"
           COMMITTER_NAME: "GitHubActionBot"
           COMMITTER_EMAIL: "action-bot@users.noreply.github.com"
