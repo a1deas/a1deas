@@ -65,6 +65,8 @@ as most projects are private or organization-based.
 
 ![WakaTime](https://github-readme-stats-ruddy-gamma-24.vercel.app/api/wakatime?username=a1deas&range=last_7_days&langs_count=6&hide=Git%20Config,JSON,YAML,TOML,XML,INI,Objective-C&theme=tokyonight&hide_border=true)
 
+> **Total (last 7 days):** <!--START_SECTION:wakatotal--><!--END_SECTION:wakatotal-->
+
 ---
 
 ### Current Focus
