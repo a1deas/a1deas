@@ -31,27 +31,48 @@ jobs:
             echo "range=last_7_days" >> $GITHUB_OUTPUT
           fi
 
-      - name: Update README with WakaTime
+      - name: Update README (WakaTime TOTAL only)
         uses: athul/waka-readme@master
         with:
-          # ---- auth ----
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPOSITORY: a1deas/a1deas
           API_BASE_URL: https://wakatime.com/api
 
-          # ---- content ----
-          SECTION_NAME: waka
+          SECTION_NAME: wakatotal     
+          SHOW_TITLE: false
+          SHOW_TIME: false
+          SHOW_MASKED_TIME: false
+          SHOW_TOTAL: true            
+          LANG_COUNT: 0               
+          STOP_AT_OTHER: true
+          CODE_LANG: txt
+          TIME_RANGE: ${{ steps.tr.outputs.range }}
+
+          COMMIT_MESSAGE: "chore: update WakaTime total"
+          COMMITTER_NAME: "GitHubActionBot"
+          COMMITTER_EMAIL: "action-bot@users.noreply.github.com"
+          AUTHOR_NAME: "Roland | A1deas"
+          AUTHOR_EMAIL: ${{ secrets.AUTHOR_EMAIL }}
+
+      - name: Update README (WakaTime FULL breakdown)
+        uses: athul/waka-readme@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY: a1deas/a1deas
+          API_BASE_URL: https://wakatime.com/api
+
+          SECTION_NAME: waka        
           SHOW_TITLE: true
           SHOW_TIME: true
           SHOW_MASKED_TIME: true
-          SHOW_TOTAL: true                  
-          LANG_COUNT: 6
+          SHOW_TOTAL: true
+          LANG_COUNT: 8
           STOP_AT_OTHER: true
           CODE_LANG: txt
           TIME_RANGE: ${{ steps.tr.outputs.range }}
           BLOCKS: ⣀⣄⣤⣦⣶⣷⣿
-
 
           IGNORED_LANGUAGES: |
             Binary
