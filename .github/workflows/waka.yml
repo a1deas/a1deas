@@ -62,8 +62,6 @@ jobs:
             INI
             Git Config
             Objective-C
-            Cuda
-            # Markdown
 
           # ---- commit meta ----
           COMMIT_MESSAGE: "chore: update WakaTime stats"
