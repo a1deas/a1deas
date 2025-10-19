@@ -63,22 +63,7 @@ as most projects are private or organization-based.
 
 ### Weekly Dev Metrics
 
-<!--START_SECTION:waka-->
-
-```txt
-From: 10 October 2025 - To: 17 October 2025
-
-Total Time: 9 hrs 48 mins
-
-C++                                3 hrs 18 mins   ⣿⣿⣿⣿⣿⣿⣿⣿⣦⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   33.81 %
-CUDA                               2 hrs 7 mins    ⣿⣿⣿⣿⣿⣤⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   21.62 %
-Markdown                           1 hr 50 mins    ⣿⣿⣿⣿⣶⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   18.79 %
-C                                  5 mins          ⣄⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   00.87 %
-Git Config                         5 mins          ⣄⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   00.86 %
-Objective-C                        0 secs          ⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   00.07 %
-```
-
-<!--END_SECTION:waka-->
+![WakaTime](https://github-readme-stats-ruddy-gamma-24.vercel.app/api/wakatime?username=a1deas&range=last_7_days&langs_count=6&hide=Git%20Config,JSON,YAML,TOML,XML,INI,Objective-C&theme=tokyonight&hide_border=true)
 
 ---
 
