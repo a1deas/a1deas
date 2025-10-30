@@ -57,8 +57,6 @@ as most projects are private or organization-based.
 
 ![Top Languages](https://github-readme-stats-ruddy-gamma-24.vercel.app/api/top-langs/?username=a1deas&layout=compact&theme=tokyonight&hide_border=true&hide=cmake,dockerfile,html,css,json,scss,shell,Mako)
 
-![GitHub Streak](https://streak-stats.demolab.com?user=a1deas&theme=tokyonight&hide_border=true)
-
 ---
 
 ### Weekly Dev Metrics
