@@ -28,7 +28,7 @@
 - Experiment tracking (W&B / MLflow)
 
 **MLOps / Infra**
-- Docker, Celery, Redis • FastAPI • Linux  
+- Docker, Celery, Redis • FastAPI  
 - Planning to explore vector search (FAISS / pgvector) • SSE/WebSockets
 
 **Acceleration**
